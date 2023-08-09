@@ -1,0 +1,16 @@
+%Generation of Waveforms
+clc;
+clf;
+clear all;
+A = input('Enter Amplitude for sinewave A = ');
+f = input('Enter modulating Frequency f = ');
+w = 2* pi * f;
+t = 0:0.001:1/f;
+
+x = A*sin(w*t);
+
+xlabel('time');
+ylabel('amplitude');
+title('sine Waveform');
+plot(t,x);
+stem(t,x);
