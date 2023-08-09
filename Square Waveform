@@ -1,0 +1,23 @@
+clc;
+clf;
+clear all;
+A = input('Enter Amplitude for sinewave A = ');
+f = input('Enter modulating Frequency f = ');
+w = 2* pi * f;
+t = 0:0.001:1/f;
+
+x = A*square(w*t);
+
+subplot(2,1,1);
+plot(t,x);
+xlabel('time');
+ylabel('amplitude');
+title('square Waveform');
+
+
+subplot(2,1,2);
+stem(t,x);
+xlabel('time');
+ylabel('amplitude');
+title('square Waveform');
+
